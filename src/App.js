@@ -3,9 +3,15 @@ import './App.css';
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { increment, decrement, onChange, onSubmit, toggle } from './actions'
+import TodoInput from './TodoInput'
 
 class App extends Component {
 
+  onClick = () => {
+    this.props.arr.map(item => {
+      this.props.toggle(item.text)
+    })
+  }
 
   render() {
     return (
@@ -19,7 +25,7 @@ class App extends Component {
         {this.props.number}
         <ul style={{listStyleType: 'none'}}>
         {this.props.arr.map(ele => {
-          return <div style={{display: 'flex'}}><input  type="checkbox" checked={ele.checked} onClick={this.props.toggle}/><li>{ele.text}</li></div>
+          return <div style={{display: 'flex'}}><TodoInput  type="checkbox" checked={ele.checked} onClick={this.props.toggle} text={ele.text}/><li>{ele.text}</li></div>
         })}
         </ul>
       </div>

@@ -3,7 +3,6 @@ import {combineReducers} from 'redux'
   const INIT_STATE = {
     value: '',
     arr: [ {
-      id: 0,
       text: 'Learn Redux!',
       checked: false
     }
@@ -32,7 +31,7 @@ const toDo = (state = INIT_STATE, action) => {
       return {
         ...state,
         arr: [...state.arr,
-              {id: action.id, text: state.value, checked:false},
+              { text: state.value, checked:false},
             ],
         value: ''
       }
@@ -40,7 +39,7 @@ const toDo = (state = INIT_STATE, action) => {
     return {
         ...state,
         arr: state.arr.map(item => {
-          if (action.id !== item.id) return item;
+          if (action.text !== item.text) return item;
           return {
             ...item,
             checked: !item.checked,

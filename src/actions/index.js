@@ -17,18 +17,15 @@ export const onChange = (value) => {
   }
 }
 
-export const onSubmit = (e, id) => {
+export const onSubmit = (e) => {
   return {
     type: 'SUBMIT',
-    e,
-    id
-
+    e
   }
 }
-export const toggle = (id) => {
+export const toggle = (text) => {
   return {
     type: 'TOGGLE',
-    id
-
+    text
   }
 }
