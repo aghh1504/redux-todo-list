@@ -1,47 +1,47 @@
 export const decrement = () => {
   return {
-    type: 'DECREMENT'
-  }
-}
+    type: "DECREMENT"
+  };
+};
 
 export const increment = () => {
   return {
-    type: 'INCREMENT'
-  }
-}
+    type: "INCREMENT"
+  };
+};
 
-export const onChange = (value) => {
+export const onChange = value => {
   return {
-    type: 'CHANGE',
+    type: "CHANGE",
     value
-  }
-}
+  };
+};
 
-export const onSubmit = (e) => {
+export const onSubmit = e => {
   return {
-    type: 'SUBMIT',
+    type: "SUBMIT",
     e
-  }
-}
-export const toggle = (text) => {
+  };
+};
+export const toggle = text => {
   return {
-    type: 'TOGGLE',
+    type: "TOGGLE",
     text
-  }
-}
+  };
+};
 export const allItems = () => {
   return {
-    type: 'ALL_ITEMS'
-  }
-}
+    type: "ALL_ITEMS"
+  };
+};
 export const checkedItems = () => {
-  console.log(`action checkedItems`)
+  console.log(`action checkedItems`);
   return {
-    type: 'CHECKED_ITEMS'
-  }
-}
+    type: "CHECKED_ITEMS"
+  };
+};
 export const UnCheckedItems = () => {
   return {
-    type: 'UNCHECKED_ITEMS'
-  }
-}
+    type: "UNCHECKED_ITEMS"
+  };
+};
