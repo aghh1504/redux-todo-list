@@ -1,6 +1,8 @@
 import {combineReducers} from 'redux'
 
+//show: [all, checked, unchecked]
   const INIT_STATE = {
+    show: 'all',
     value: '',
     arr: [ {
       text: 'Learn Redux!',
@@ -46,6 +48,24 @@ const toDo = (state = INIT_STATE, action) => {
           };
         })
       }
+    case 'ALL_ITEMS':
+      return {
+        ...state,
+        show: 'all'
+      }
+    case 'CHECKED_ITEMS':
+      console.log(`reducer ${JSON.stringify({        ...state,
+              arr: state.arr.filter(item => item.checked)})}`)
+      return {
+        ...state,
+        show: 'checked'
+      }
+      case 'UNCHECKED_ITEMS':
+        return {
+          ...state,
+          show: 'unchecked'
+        }
+
   }
     return state;
 }

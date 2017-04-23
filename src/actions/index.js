@@ -29,3 +29,19 @@ export const toggle = (text) => {
     text
   }
 }
+export const allItems = () => {
+  return {
+    type: 'ALL_ITEMS'
+  }
+}
+export const checkedItems = () => {
+  console.log(`action checkedItems`)
+  return {
+    type: 'CHECKED_ITEMS'
+  }
+}
+export const UnCheckedItems = () => {
+  return {
+    type: 'UNCHECKED_ITEMS'
+  }
+}
